@@ -1,0 +1,12 @@
+name: Check NPM outdated
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  npm-outdated:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        # Expected to produce an error
+      - uses: gh640/npm-outdated-action@main
